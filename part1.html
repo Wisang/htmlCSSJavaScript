@@ -35,10 +35,31 @@
 		<select>
 			<option id="country" value="no selection">no selection</option>
 			<option id="country" value="Korea">South Korea</option>
+			<option id="country" value="USA">USA</option>
+			<option id="country" value="UK">UK</option>
+			<option id="country" value="France">France</option>
 		</select>
-		
+	</fieldSet>
 
+	<fieldset>
+		<legend>Your Indicators</legend>
+		<label for="height">Height: </label>
+		short <input type="range" id="height" name="height" min="0" max="250"></input> tall
+		<br>
+		<label for="salary">Salary: </label>
+		Poor <input type="range" id="salary" name="salary" min="0"></input> Rich
+	</fieldset>
 
-	</fieleSet>
+	<fieldset>
+		<legend>Your Contact Information</legend>
+		<label for="email">Email: </label>
+		<input type="email" id="email" name= "email"></input>
+		<br>
+		<label for="mobile">Mobile: </label>
+		<input type="tel" id="mobile" name= "mobile"></input>
+		<br>
+		<label for="addr">Address: </label><br>
+		<input type="text" id="addr" name="addr"></input>
+	</fieldset>
 </body>
 <html>

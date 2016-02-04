@@ -5,65 +5,68 @@
 </head>
 
 <body>
-	<fieldSet>
-		<legend>Your Face</legend>
-		<label for="your image"> Your Image</label>
-		<input type="file" id="your image" name="your image" method="post" action="http://ihome.ust.hk/~rossiter/cgi-bin/show_everything.php "></input>
-		<p>Image preview: </p>
-	</fieldSet>
+	<form action = "https://ihome.ust.hk/~rossiter/cgi-bin/show_everything.php" method="post" enctype="multipart/form-data">
+		<fieldSet>
+			<legend>Your Face</legend>
+			<label for="your image"> Your Image</label>
+			<input type="file" id="your image" name="your image"></input>
+			<p>Image preview: </p>
+		</fieldSet>
 
-	<fieldSet>
-		<legend>Your General Details</legend>
-		<label for="name">Name: </label>
-		<input type="text" id="name" name="full name" placeholder="Hong Gildong" required></input> <br>
+		<fieldSet>
+			<legend>Your General Details</legend>
+			<label for="name">Name: </label>
+			<input type="text" id="name" name="full name" placeholder="Hong Gildong" required></input> <br>
 
-		<label for="gender">Gender: </label>
-		<input type="radio" id="gender" name="gender" value="Male" required> Male
-		<input type="radio" id="gender" name="gender" value="Female" required> Female
-		<br>
+			<label for="gender">Gender: </label>
+			<input type="radio" id="gender" name="gender" value="Male" required> Male
+			<input type="radio" id="gender" name="gender" value="Female" required> Female
+			<br>
 
-		<label for="age">Age: </label>
-		<input type="number" id="age" name="age" required><br>
+			<label for="age">Age: </label>
+			<input type="number" id="age" name="age" required><br>
 
-		<label for="birthDate">Birth Date: </label>
-		<input type="date" id="birthDate" name="birthDate" required><br>
+			<label for="birthDate">Birth Date: </label>
+			<input type="date" id="birthDate" name="birthDate" required><br>
 
-		<label for="favColor">Favorite Color: </label>
-		<input type="color" id="favColor" name="favColor" required><br>
+			<label for="favColor">Favorite Color: </label>
+			<input type="color" id="favColor" name="favColor" required><br>
 
-		<label for"country">Which Country: </label>
-		<select>
-			<option id="country" value="no selection">no selection</option>
-			<option id="country" value="Korea">South Korea</option>
-			<option id="country" value="USA">USA</option>
-			<option id="country" value="UK">UK</option>
-			<option id="country" value="France">France</option>
-		</select>
-	</fieldSet>
+			<label for"country">Which Country: </label>
+			<select>
+				<option id="country" value="no selection">no selection</option>
+				<option id="country" value="Korea">South Korea</option>
+				<option id="country" value="USA">USA</option>
+				<option id="country" value="UK">UK</option>
+				<option id="country" value="France">France</option>
+			</select>
+		</fieldSet>
 
-	<fieldset>
-		<legend>Your Indicators</legend>
-		<label for="height">Height: </label>
-		short <input type="range" id="height" name="height" min="0" max="250"></input> tall
-		<br>
-		<label for="salary">Salary: </label>
-		Poor <input type="range" id="salary" name="salary" min="0"></input> Rich
-	</fieldset>
+		<fieldset>
+			<legend>Your Indicators</legend>
+			<label for="height">Height: </label>
+			short <input type="range" id="height" name="height" min="0" max="250"></input> tall
+			<br>
+			<label for="salary">Salary: </label>
+			Poor <input type="range" id="salary" name="salary" min="0"></input> Rich
+		</fieldset>
 
-	<fieldset>
-		<legend>Your Contact Information</legend>
-		<label for="email">Email: </label>
-		<input type="email" id="email" name= "email"></input>
-		<br>
-		<label for="mobile">Mobile: </label>
-		<input type="tel" id="mobile" name= "mobile"></input>
-		<br>
-		<label for="addr">Address: </label><br>
-		<input type="text" id="addr" name="addr"></input><br>
-		<label for="method">Method to contact you: </label>
-		<input type="checkbox" id="Email" name="method">Email</input>
-		<input type="checkbox" id="Whatsapp" name="method">Whatsapp</input>
-		<input type="checkbox" id="in-app chat" name="method">in-app Chat</input>
-	</fieldset>
+		<fieldset>
+			<legend>Your Contact Information</legend>
+			<label for="email">Email: </label>
+			<input type="email" id="email" name= "email" required></input>
+			<br>
+			<label for="mobile">Mobile: </label>
+			<input type="tel" id="mobile" name= "mobile"></input>
+			<br>
+			<label for="addr">Address: </label><br>
+			<input type="text" id="addr" name="addr"></input><br>
+			<label for="method">Method to contact you: </label>
+			<input type="checkbox" id="Email" name="method">Email</input>
+			<input type="checkbox" id="Whatsapp" name="method">Whatsapp</input>
+			<input type="checkbox" id="in-app chat" name="method">In-app Chat</input>
+		</fieldset>
+		<input type="submit" value="Send"></input>
+	</form>
 </body>
 <html>

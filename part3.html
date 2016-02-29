@@ -13,15 +13,19 @@
 	label.checkbox {width: auto;}
 	label.radio {width: auto;}
 	textarea {width:360px; height: 50px;}
+	label:hover {font-size: 20px;}
+	input:hover {font-size: 20px;}
 </style>
+
 
 <body>
 	<form action = "https://ihome.ust.hk/~rossiter/cgi-bin/show_everything.php" method="post" enctype="multipart/form-data">
 		<fieldSet>
 			<legend>Your Face</legend>
-			<label for="your image"> Your Image</label>
-			<input type="file" id="your image" name="your image"></input>
+			<label for="your image">Your Image</label>
+			<input type="file" name="your image"></input>
 			<p>Image preview: </p>
+			<img id="preview">
 		</fieldSet>
 
 		<fieldSet>
@@ -79,5 +83,6 @@
 		</fieldset>
 		<input type="submit" value="Send"></input>
 	</form>
+	<script src="https://www.cse.ust.hk/~rossiter/dating_web_site.js"></script>
 </body>
 <html>

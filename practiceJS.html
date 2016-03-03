@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<title>Practice JS</title>
+<body onload='doSomeThing()'>
+	<script type="text/javascript">
+		var toDo = ["B", "D", "A", "C"];
+		var priority = [2,4,1,3];
+		var ordered = [];
+
+		document.write(toDo);
+		document.write("\n");
+
+		var reorder = function(target, source, order) {
+			var index=0;
+
+			while(index<source.length) {
+				target[order[index]-1] = source[index];
+				index++;
+			}
+		}
+
+		reorder(ordered, toDo, priority);
+
+		document.write(ordered);
+
+	</script>
+
+</body>
+</html>
+

@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+<title>Guessing Game Part1</title>
+<body id="game_plate">
+	<script type="text/javascript">
+	var finished = false;
+	var colors = ["blue", "green", "magenta", "purple", "red"];
+	var input;
+	var target;
+
+	do_game();
+
+	function do_game() {
+		var targetPosition = Math.floor(Math.random()*5);
+		target = colors[targetPosition];
+
+		document.write("target: " + target); // for debugging
+
+		while(!finished) {
+			input = prompt("I have one color among blue, green, magenta, purple, red. Guess which one I have.");
+			finished = check_guess();	
+		}
+	}
+
+	function check_guess() {
+		if(outOfRange())
+			return false;
+		
+		if(input > target) {
+			alert("your input is alphabetically bigger. Try again");
+			return false;
+		}
+		
+		if(input < target) {
+			alert("your input is alphabetically smaller. Try again");
+			return false;
+		}
+		
+		document.getElementById("game_plate").style.backgroundColor = target;
+
+		alert("Correct!");
+		return true;
+	}
+
+	function outOfRange() {
+		if(colors.indexOf(input) == -1) {
+			alert("I don't recognize your color! please try again!");
+			return true;
+		}
+		return false; 
+	}
+
+	</script>
+
+</body>
+</html>
+

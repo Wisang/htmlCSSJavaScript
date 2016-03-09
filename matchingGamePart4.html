@@ -15,7 +15,7 @@
 	<div id="rightSide"></div>
 
 	<script type="text/javascript">
-	var numberOfFaces = 5;
+	var numberOfFaces = 2;
 	var theLeftSide = document.getElementById("leftSide");
 	var theRightSide = document.getElementById("rightSide");
 	var theBody = document.getElementsByTagName("body")[0];
@@ -29,15 +29,34 @@
 			img.style.left = Math.random() * 400;
 			theLeftSide.appendChild(img);
 		}
+		updatePage();
+	}
+
+	function updatePage() {
 		var leftSideImages = theLeftSide.cloneNode(true);
 		leftSideImages.removeChild(leftSideImages.lastChild);
 		theRightSide.appendChild(leftSideImages);
+		theLeftSide.lastChild.onclick = nextLevel;
+		theBody.onclick = gameOver;
+	}
 
-		theLeftSide.lastChild.onclick = function(event) {
-			event.stopPropagation();
-			numberOfFaces += 5;
-			generateFaces();
-		}
+	function gameOver() {
+		alert("Game Over");
+		theBody.onclick = null;
+		theLeftSide.lastChild.onclick = null;
+	}
+
+	function nextLevel(event) {
+		event.stopPropagation();
+		numberOfFaces += 2;
+		removeAll(theLeftSide);
+		removeAll(theRightSide);
+		generateFaces();
+	}
+
+	function removeAll(node) {
+		while(node.firstChild)
+			node.removeChild(node.firstChild);
 	}
 
 	</script>
